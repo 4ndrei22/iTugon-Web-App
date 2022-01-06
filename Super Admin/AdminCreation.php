@@ -164,17 +164,18 @@
                       </div>
                     </div>
                     </div>
-                    <!-- <div class="row">
+                    <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
                           <label for="access">Access Level</label>
-                          <select name="access" id="access" class="form-control" name="accessLvl" id="accessLvl">
-                            <option value="1">Staff</option>
-                            <option value="0">Super Admin</option>
+                          <select class="form-control" name="accessLvl" id="accessLvl">
+                            <option value="">Select access level</option>
+                            <option value="0">Staff</option>
+                            <option value="1">Super Admin</option>
                           </select>
                       </div>
                     </div>
-                  </div> -->
+                  </div>
                     <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">

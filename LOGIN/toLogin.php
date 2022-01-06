@@ -36,14 +36,14 @@
 		//if($accessLVL == 'Staff'){
 			$_SESSION["UsernameL"] = $username;
 			$_SESSION["PasswordL"] = $password;
-			echo '<script>alert("Login Successful");</script>';
+			echo "<meta http-equiv='refresh' content='0'>";
         	header("Location: ../Dashboard(staff).php");
 		// }else{
 		// 	echo '<script>alert("Login Successful");</script>';
         // 	header("Location: ../Dashboard(super).php");
 		// }
     }else{
-        echo "Incorrect Email or Password";
+		echo '<script>alert("Incorrect Email or Password");</script>';
         header('refresh: 1, url = ../login.php');
 
     }
