@@ -1,3 +1,3 @@
 function msgOpenFunction() {
-    location.replace("Staff/Message(reopen).php");
+    location.replace("staff/Message(reopen).php");
   }

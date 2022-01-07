@@ -12,8 +12,10 @@
 	$accessLVL = "";
 
     $select = "SELECT * FROM accountcreation WHERE username = '$user'";
-    $result = mysqli_query($con,$select);
+	$insert = "INSERT INTO staffs (Firstname,Lastname,Email,Contactnum, accessLVL) SELECT Firstname,Lastname,Email,Contactnum,AdminKey FROM accountcreation WHERE Username = '$user'";
 
+    $result = mysqli_query($con,$select);
+	mysqli_query($con,$insert);
     
     if(mysqli_num_rows($result) > 0)
     {

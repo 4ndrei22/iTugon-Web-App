@@ -1,3 +1,3 @@
 function msgPendingFunction() {
-    location.replace("Staff/Message(pending).php");
+    location.replace("staff/Message(pending).php");
   }

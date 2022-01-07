@@ -22,13 +22,20 @@
   <link href="../CSS Files/Assigned.css" rel="stylesheet" />
   <link href="../CSS Files/demo.css" rel="stylesheet" />
   <!-- JS FIles -->
-  <script src="../JS Files/OnCLick/Assigned(onClick).js"></script>
-  <script src="../JS Files/OnCLick/ActiveTicket(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/Assigned(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/ActiveTicket(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/OpenTicket(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/Pending(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/Resolved(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/Closed(onClick).js"></script>
+  <script src="./JS Files/goto msg(staff)/msg(pending).js"></script>
+  <script src="./JS Files/goto msg(staff)/msg(reopen).js"></script>
+  <script src="./JS Files/goto msg(staff)/msg(resolved).js"></script>
   <!--   Core JS Files   -->
-  <script src="../JS Files/core/jquery.min.js"></script>
-  <script src="../JS Files/core/popper.min.js"></script>
-  <script src="../JS Files/core/bootstrap.min.js"></script>
-  <script src="../JS Files/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="./JS Files/core/jquery.min.js"></script>
+  <script src="./JS Files/core/popper.min.js"></script>
+  <script src="./JS Files/core/bootstrap.min.js"></script>
+  <script src="./JS Files/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!-- Chart JS -->
   <script src="../assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->

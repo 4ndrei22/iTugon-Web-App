@@ -13,9 +13,11 @@
 	
 	include 'connect.php';
 
-	$sql = "UPDATE `accountcreation` SET Firstname = '$firstname', Lastname = '$lastname', Email = '$email', Contactnum = '$contactnum'
+	$sql1 = "UPDATE `accountcreation` SET Firstname = '$firstname', Lastname = '$lastname', Email = '$email', Contactnum = '$contactnum'
             WHERE Firstname = '$firstname' OR Lastname = '$lastname' OR Email = '$email' OR Contactnum = '$contactnum'";
-	$result = mysqli_query($con, $sql);
+	$sql2 = "SELECT * FROM accountcreation WHERE Firstname = '$firstname' AND Lastname = '$last'";
+	mysqli_query($con,$sql1);
+	$result = mysqli_query($con, $sql2);
 
 	$count =  mysqli_num_rows ($result);
 	if($count == 1)
@@ -36,7 +38,7 @@
 	else
 	{
 		echo ("Update Error. You will be redirected in 3 sec.");
-		header("refresh: 3; url=./user.html");
+		header("refresh: 3; url=./user.php");
 	}
 	mysqli_close($con);
 ?>

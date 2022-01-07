@@ -123,7 +123,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="./ChangeUsername.php">Change Username</a>
                   <a class="dropdown-item" href="./ChangePassword.php">Change Password</a>
-                  <a class="dropdown-item" href="../Login.php">Logout</a>
+                  <a class="dropdown-item" href="./truncateUser.php">Logout</a>
                 </div>
               </li>
               
@@ -142,20 +142,38 @@
               <div class="card-body">
                 <div class="author">
                     <img class="avatar border-gray" src="../Image Files/logo-small.png" alt="...">
-                    <h5>Juan Dela Cruz</h5>
+                    <?php
+                      include 'connect.php';
+                      //$sql = "SELECT Firstname, Lastname FROM staffs";
+                      $sql = "SELECT * FROM staffs";
+                      $result = mysqli_query($con,$sql);
+                      if(mysqli_num_rows($result) > 0){
+                        while ($row = mysqli_fetch_assoc($result)){
+                        
+                          $firstname = $row['Firstname'];
+                          $lastname = $row['Lastname'];
+                          $fullname = $firstname . " " . $lastname;
+                          $email = $row['Email'];
+                          $contactnum = $row['Contactnum'];
+                          echo "<h5 style =  'text-transform: uppercase;'>$fullname</h5>";
+                        }
+                      }
+                        
+                      
+                    ?>
                   <!-- <form action="./ChangeInfo.php" method="post">   -->
                   <form  method="post">                  
                     <div class="row">
                       <div class="col-md-3" style="margin-left: 24%;">
                         <div class="form-group">
                           <label for="fname">First Name</label>
-                          <input type="text" class="form-control" placeholder="First Name" value="Juan" id="firstname" required>
+                          <input type="text" class="form-control" placeholder="First Name" value="<?php echo $firstname; ?>" id="firstname" required>
                         </div>
                       </div>
                       <div class="col-md-3" style="margin-left: 2%;">
                         <div class="form-group">
                           <label for="lname">Last Name</label>
-                          <input type="text" class="form-control" placeholder="Last Name" value="Dela Cruz" id="lastname" required>
+                          <input type="text" class="form-control" placeholder="Last Name" value="<?php echo $lastname; ?>" id="lastname" required>
                         </div>
                       </div>
                     </div>
@@ -163,13 +181,13 @@
                       <div class="col-md-3" style="margin-left: 24%;">
                         <div class="form-group">
                           <label for="email">Email</label>
-                          <input type="text" class="form-control" placeholder="Email" value="juan@email.com" id="email" required>
+                          <input type="text" class="form-control" placeholder="Email" value="<?php echo $email; ?>" id="email" required>
                         </div>
                       </div>
                       <div class="col-md-3" style="margin-left: 2%;">
                         <div class="form-group">
                           <label for="contactnum">Contact Number</label>
-                          <input type="text" class="form-control" placeholder="Contact Number" value="0912454545" id="Contact Number" required>
+                          <input type="text" class="form-control" placeholder="Contact Number" value="<?php echo $contactnum; ?>" id="Contact Number" required>
                         </div>
                       </div>
                     </div>

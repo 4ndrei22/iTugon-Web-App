@@ -18,12 +18,6 @@
     <link href="../CSS Files/demo.css" rel="stylesheet" />
     <link href="../CSS Files/AssignedTicket.css" rel="stylesheet" />
     <!-- JS Files -->
-    <script src="../JS Files/OnCLick/Assigned(onClick).js"></script>
-    <script src="../JS Files/OnCLick/ActiveTicket(onClick).js"></script>
-    <script src="../JS Files/OnCLick/OpenTicket(onClick).js"></script>
-    <script src="../JS Files/OnCLick/Pending(onClick).js"></script>
-    <script src="../JS Files/OnCLick/Resolved(onClick).js"></script>
-    <script src="../JS Files/OnCLick/Closed(onClick).js"></script>
     <script src="../JS Files/core/jquery.min.js"></script>
     <script src="../JS Files/core/popper.min.js"></script>
     <script src="../JS Files/core/bootstrap.min.js"></script>
@@ -77,7 +71,7 @@
               <p>Knowledgebase</p>
             </a>
           </li>
-          <li>
+          <li class="active">
             <a href="./user.php">
               <i class="fa fa-user"></i>
               <p>User Profile</p>
@@ -116,7 +110,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="./ChangeUsername.php">Change Username</a>
                       <a class="dropdown-item" href="./ChangePassword.php">Change Password</a>
-                      <a class="dropdown-item" href="../Login.php">Logout</a>
+                      <a class="dropdown-item" href="./truncateUser.php">Logout</a>
                     </div>
                   </li>
                   
@@ -135,33 +129,52 @@
               <div class="card-body">
                 <div class="author">
                     <img class="avatar border-gray" src="../Image Files/logo-small.png" alt="...">
-                    <h5>Juan Dela Cruz</h5>
-                  <form>                  
+                    <?php
+                      include 'connect.php';
+                      //$sql = "SELECT Firstname, Lastname FROM staffs";
+                      $sql = "SELECT * FROM staffs";
+                      $result = mysqli_query($con,$sql);
+                      if(mysqli_num_rows($result) > 0){
+                        while ($row = mysqli_fetch_assoc($result)){
+                        
+                          $firstname = $row['Firstname'];
+                          $lastname = $row['Lastname'];
+                          $fullname = $firstname . " " . $lastname;
+                          $email = $row['Email'];
+                          $contactnum = $row['Contactnum'];
+                          echo "<h5 style =  'text-transform: uppercase;'>$fullname</h5>";
+                        }
+                      }
+                        
+                      
+                    ?>
+                  <!-- <form action="./ChangeInfo.php" method="post">   -->
+                  <form  method="post">                  
                     <div class="row">
                       <div class="col-md-3" style="margin-left: 24%;">
                         <div class="form-group">
-                          <label>First Name</label>
-                          <input type="text" class="form-control" placeholder="First Name" value="Juan">
+                          <label for="fname">First Name</label>
+                          <input type="text" class="form-control" placeholder="First Name" value="<?php echo $firstname; ?>" id="firstname" required>
                         </div>
                       </div>
                       <div class="col-md-3" style="margin-left: 2%;">
                         <div class="form-group">
-                          <label>Last Name</label>
-                          <input type="text" class="form-control" placeholder="Last Name" value="Dela Cruz">
+                          <label for="lname">Last Name</label>
+                          <input type="text" class="form-control" placeholder="Last Name" value="<?php echo $lastname; ?>" id="lastname" required>
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-3" style="margin-left: 24%;">
                         <div class="form-group">
-                          <label>Email</label>
-                          <input type="text" class="form-control" placeholder="Email" value="juan@email.com">
+                          <label for="email">Email</label>
+                          <input type="text" class="form-control" placeholder="Email" value="<?php echo $email; ?>" id="email" required>
                         </div>
                       </div>
                       <div class="col-md-3" style="margin-left: 2%;">
                         <div class="form-group">
-                          <label>Contact Number</label>
-                          <input type="text" class="form-control" placeholder="Contact Number" value="0912454545">
+                          <label for="contactnum">Contact Number</label>
+                          <input type="text" class="form-control" placeholder="Contact Number" value="<?php echo $contactnum; ?>" id="Contact Number" required>
                         </div>
                       </div>
                     </div>

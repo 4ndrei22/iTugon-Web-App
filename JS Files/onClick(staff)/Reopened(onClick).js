@@ -1,3 +1,3 @@
 function ReopenFunction() {
-    location.replace("Staff/Ticket(reopened).php");
+    location.replace("staff/Ticket(reopened).php");
   }

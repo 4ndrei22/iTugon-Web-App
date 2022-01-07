@@ -1,3 +1,3 @@
 function resolvedFunction() {
-    location.replace("Staff/Ticket(Resolved).php");
+    location.replace("staff/Ticket(Resolved).php");
   }

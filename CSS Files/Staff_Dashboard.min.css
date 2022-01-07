@@ -3849,8 +3849,8 @@
   .off-canvas-sidebar .logo,
   .sidebar .logo {
     position: relative;
-    padding: 7px 0.7rem;
-    z-index: 4;
+    padding: 20px 0.7rem;
+    z-index: 6;
   }
   .off-canvas-sidebar .logo a.logo-mini,
   .sidebar .logo a.logo-mini {

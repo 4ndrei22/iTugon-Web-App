@@ -18,7 +18,7 @@
     <link href="../CSS Files/demo.css" rel="stylesheet" />
     <link href="../CSS Files/ActiveTickets.css" rel="stylesheet">
     <!-- JS Files -->
-    <script src="../JS Files/goto msg/msg(resolved).js"></script>
+    <script src="../JS Files/goto msg(staff)/msg(resolved).js"></script>
     <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>

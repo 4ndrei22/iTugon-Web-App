@@ -1,3 +1,3 @@
 function msgResolvedFunction() {
-    location.replace("Staff/Message(resolved).php");
+    location.replace("staff/Message(resolved).php");
   }

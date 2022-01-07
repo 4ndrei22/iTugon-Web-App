@@ -1,3 +1,3 @@
 function closedFunction() {
-    location.replace("Staff/Ticket(Closed).php");
+    location.replace("staff/Ticket(Closed).php");
   }

@@ -1,3 +1,3 @@
 function pendingFunction() {
-    location.replace("Staff/Ticket(Pending).php");
+    location.replace("staff/Ticket(Pending).php");
   }

@@ -1,3 +1,3 @@
 function ActiveFunction() {
-    location.replace("Staff/Ticket(open).php");
+    location.replace("staff/Ticket(open).php");
   }

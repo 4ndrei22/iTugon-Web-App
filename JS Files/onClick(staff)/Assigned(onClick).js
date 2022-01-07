@@ -1,3 +1,3 @@
 function AssignedFunction() {
-    location.replace("Staff/Ticket(assigned).php");
+    location.replace("staff/Ticket(assigned).php");
   }

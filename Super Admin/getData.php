@@ -17,7 +17,7 @@
           $password = password_hash($_POST["passwordR"], PASSWORD_DEFAULT);
           $sql = "INSERT INTO accountcreation (adminKey, Firstname, Lastname, Email, Contactnum, Username, Password)
                   VALUES ('$accessLvl','$Fname','$Lname','$email','$ContactNum','$user','$password')";
-          $sql2 = "INSERT INTO staff_tickets (staff_name,accessLVL) VALUES ('$Fname','$accessLvl')"  ;
+          $sql2 = "INSERT INTO staff_tickets (Staff_name, accessLVL) VALUES ('$Fname','$accessLvl')" ;
           
           mysqli_query($con,$sql);
           mysqli_query($con,$sql2);
