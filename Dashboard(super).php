@@ -124,7 +124,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="./Super Admin/ChangeUsername.php">Change Username</a>
                   <a class="dropdown-item" href="./Super Admin/ChangePassword.php">Change Password</a>
-                  <a class="dropdown-item" href="./Login.php">Logout</a>
+                  <a class="dropdown-item" href="./Super Admin/truncateUser.php">Logout</a>
                 </div>
               </li>
               

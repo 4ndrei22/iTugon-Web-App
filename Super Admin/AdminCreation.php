@@ -8,6 +8,8 @@
     BulSU iTugon
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -16,6 +18,7 @@
   <link href="../CSS Files/Staff_Dashboard.css?v=2.0.1" rel="stylesheet" />
   <link href="../CSS Files/demo.css" rel="stylesheet" />
   <!--   Core JS Files   -->
+  <script src="../JS Files/Errormsg.js"></script>
   <script src="../JS Files/core/jquery.min.js"></script>
   <script src="../JS Files/core/popper.min.js"></script>
   <script src="../JS Files/core/bootstrap.min.js"></script>
@@ -135,7 +138,7 @@
                   <h5 class="card-title">Create Account</h5>
                 </div>
                 <div class="card-body">
-                <form id="" action="./getData.php" method="post">
+                <form id="form" action="./getData2.php" method="post">
                     <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
@@ -169,9 +172,9 @@
                       <div class="form-group">
                           <label for="access">Access Level</label>
                           <select class="form-control" name="accessLvl" id="accessLvl">
-                            <option value="">Select access level</option>
-                            <option value="0">Staff</option>
-                            <option value="1">Super Admin</option>
+                            <!-- <option value="">Select access level</option> -->
+                            <option value="1"name="Staff" id="Staff">Staff</option>
+                            <option value="2" name="Super Admin" id="Super Admin">Super Admin</option>
                           </select>
                       </div>
                     </div>
@@ -196,7 +199,7 @@
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
                         <label>Confirm Password</label>
-                        <input type="Password" class="form-control" placeholder="Confirm Password" name="conPasswordR" id="conPasswordR">
+                        <input type="Password" class="form-control" placeholder="Confirm Password" name="conPassword" id="conPassword">
                       </div>
                     </div>
                     </div>
@@ -239,7 +242,6 @@
                       <th>Email</th>
                       <th>Contact Number</th>
                       <th>Username</th>
-                      <th>Password</th>
                     </thead>
                     <tbody>
                     <?php
@@ -250,7 +252,7 @@
                       // output data of each row
                         while($row = $result->fetch_assoc()) {
                           echo "<tr><td>" . $row["Firstname"]. "</td><td>" . $row["Lastname"] . "</td><td>" . $row["adminKey"] .
-                               "</td><td>". $row["Email"] . "</td><td>". $row["Contactnum"] . "</td><td>". $row["Username"] . "</td><td>". $row["Password"]. "</td></tr>";
+                               "</td><td>". $row["Email"] . "</td><td>". $row["Contactnum"] . "</td><td>". $row["Username"] . "</td></tr>";
                         }
                       echo "</table>";
                       } else { echo "0 results"; }

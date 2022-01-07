@@ -11,11 +11,11 @@
     $password = "";
 	$accessLVL = "";
 
-    $select = "SELECT * FROM accountcreation WHERE username = '$user'";
-	$insert = "INSERT INTO staffs (Firstname,Lastname,Email,Contactnum, accessLVL) SELECT Firstname,Lastname,Email,Contactnum,AdminKey FROM accountcreation WHERE Username = '$user'";
+    $select = "SELECT * FROM accountcreation WHERE username = '$user' and password = '$pass'";
+	//$insert = "INSERT INTO staffs (Firstname,Lastname,Email,Contactnum, accessLVL) SELECT Firstname,Lastname,Email,Contactnum,AdminKey FROM accountcreation WHERE Username = '$user' ";
 
     $result = mysqli_query($con,$select);
-	mysqli_query($con,$insert);
+	//mysqli_query($con,$insert);
     
     if(mysqli_num_rows($result) > 0)
     {
@@ -25,10 +25,14 @@
 				$_SESSION["UsernameL"] = $user;
 				$_SESSION["passwordL"] = $pass;
 				header("Location: ../Dashboard(staff).php");
+				$insert = "INSERT INTO staffs (Firstname,Lastname,Email,Contactnum, accessLVL) SELECT Firstname,Lastname,Email,Contactnum,AdminKey FROM accountcreation WHERE Username = '$user' ";
+				mysqli_query($con,$insert);
 				}else{
 				$_SESSION["UsernameL"] = $user;
 				$_SESSION["passwordL"] = $pass;
 				header("Location: ../Dashboard(super).php");
+				$insert = "INSERT INTO staffs (Firstname,Lastname,Email,Contactnum, accessLVL) SELECT Firstname,Lastname,Email,Contactnum,AdminKey FROM accountcreation WHERE Username = '$user' ";
+				mysqli_query($con,$insert);
 				}
 			
         }

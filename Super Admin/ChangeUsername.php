@@ -123,7 +123,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="./ChangeUsername.php">Change Username</a>
                   <a class="dropdown-item" href="./ChangePassword.php">Change Password</a>
-                  <a class="dropdown-item" href="../Login.php">Logout</a>
+                  <a class="dropdown-item" href="./truncateUser.php">Logout</a>
                 </div>
               </li>
               
