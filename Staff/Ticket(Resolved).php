@@ -18,7 +18,7 @@
     <link href="../CSS Files/demo.css" rel="stylesheet" />
     <link href="../CSS Files/ActiveTickets.css" rel="stylesheet">
     <!-- JS Files -->
-    <script src="../JS Files/goto msg(staff)/msg(resolved).js"></script>
+    <script src="../JS Files/goto msg(staff)/Staffmsg(resolved).js"></script>
     <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
@@ -111,7 +111,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="./ChangeUsername.php">Change Username</a>
                       <a class="dropdown-item" href="./ChangePassword.php">Change Password</a>
-                      <a class="dropdown-item" href="../Login.php">Logout</a>
+                      <a class="dropdown-item" href="./truncateUser.php">Logout</a>
                     </div>
                   </li>
                   

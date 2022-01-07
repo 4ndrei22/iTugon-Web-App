@@ -17,15 +17,12 @@
   <link href="./CSS Files/Staff_Dashboard.css" rel="stylesheet" />
   <link href="./CSS Files/demo.css" rel="stylesheet" />
   <!-- JS Files -->
-  <script src="./JS Files/onClick(staff)/Assigned(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/ActiveTicket(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/OpenTicket(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/Pending(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/Resolved(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/Closed(onClick).js"></script>
-  <script src="./JS Files/goto msg(staff)/msg(pending).js"></script>
-  <script src="./JS Files/goto msg(staff)/msg(reopen).js"></script>
-  <script src="./JS Files/goto msg(staff)/msg(resolved).js"></script>
+  <script src="./JS Files/onClick(staff)/StaffAssigned(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/StaffOpenTicket(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/StaffReopened(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/StaffPending(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/StaffResolved(onClick).js"></script>
+  <script src="./JS Files/onClick(staff)/StaffClosed(onClick).js"></script>
   <script src="./JS Files/core/jquery.min.js"></script>
   <script src="./JS Files/core/popper.min.js"></script>
   <script src="./JS Files/core/bootstrap.min.js"></script>
@@ -89,7 +86,7 @@
           </li>
         </ul>
       </div>
-    </div>
+  </div>
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-absolute fixed-top" Style="background-color: #671e1e;">
@@ -121,7 +118,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="./Staff/ChangeUsername.php">Change Username</a>
                   <a class="dropdown-item" href="./Staff/ChangePassword.php">Change Password</a>
-                  <a class="dropdown-item" href="./Login.php">Logout</a>
+                  <a class="dropdown-item" href="./Staff/truncateUser.php">Logout</a>
                 </div>
               </li>
               
@@ -156,11 +153,11 @@
           <div class="col-md-8 col-sm-5">
             <div class="row">
               <div class="col-md-6 col-sm-5"id="ActiveTicket" onclick="AssignedFunction();">
-            <div class="card card-stats ">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-2" >
-                    <div class="icon-big text-center icon-warning">
+                <div class="card card-stats ">
+                <div class="card-body ">
+                  <div class="row">
+                    <div class="col-5 col-md-2" >
+                      <div class="icon-big text-center icon-warning">
 
                       <i class="fa fa-user-circle text-warning"></i>
                     </div>
@@ -177,10 +174,10 @@
                 <hr>
                 <div class="stats">
                 </div>
+                </div>
+                </div>
               </div>
-            </div>
-              </div>
-              <div class="col-md-6 col-sm-5"id="ActiveTicket" onclick="ActiveFunction();">
+              <div class="col-md-6 col-sm-5"id="ActiveTicket" onclick="StaffActiveFunction();">
             <div class="card card-stats" style="background-color:#5cb85c;">
               <div class="card-body ">
                 <div class="row">

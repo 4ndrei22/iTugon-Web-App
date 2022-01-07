@@ -22,12 +22,6 @@
   <link href="../CSS Files/Assigned.css" rel="stylesheet" />
   <link href="../CSS Files/demo.css" rel="stylesheet" />
   <!-- JS FIles -->
-  <script src="./JS Files/onClick(staff)/Assigned(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/ActiveTicket(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/OpenTicket(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/Pending(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/Resolved(onClick).js"></script>
-  <script src="./JS Files/onClick(staff)/Closed(onClick).js"></script>
   <script src="./JS Files/goto msg(staff)/msg(pending).js"></script>
   <script src="./JS Files/goto msg(staff)/msg(reopen).js"></script>
   <script src="./JS Files/goto msg(staff)/msg(resolved).js"></script>
@@ -123,7 +117,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="./ChangeUsername.php">Change Username</a>
                       <a class="dropdown-item" href="./ChangePassword.php">Change Password</a>
-                      <a class="dropdown-item" href="../Login.php">Logout</a>
+                      <a class="dropdown-item" href="./truncateUser.php">Logout</a>
                     </div>
                   </li>
                   
